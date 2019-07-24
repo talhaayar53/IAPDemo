@@ -13,6 +13,8 @@
 		AB69189A22E8844800FD5845 /* IAPDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB69189822E8844800FD5845 /* IAPDemo.xcdatamodeld */; };
 		AB69189C22E8844A00FD5845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB69189B22E8844A00FD5845 /* Assets.xcassets */; };
 		AB69189F22E8844A00FD5845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB69189D22E8844A00FD5845 /* LaunchScreen.storyboard */; };
+		AB6918A822E8845A00FD5845 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6918A722E8845A00FD5845 /* StoreKit.framework */; };
+		AB6918AA22E8849700FD5845 /* IAPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6918A922E8849700FD5845 /* IAPHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AB69189B22E8844A00FD5845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB69189E22E8844A00FD5845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB6918A022E8844A00FD5845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB6918A722E8845A00FD5845 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AB6918A922E8849700FD5845 /* IAPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6918A822E8845A00FD5845 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				AB69189022E8844800FD5845 /* IAPDemo */,
 				AB69188F22E8844800FD5845 /* Products */,
+				AB6918A622E8845A00FD5845 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +69,17 @@
 				AB69189D22E8844A00FD5845 /* LaunchScreen.storyboard */,
 				AB6918A022E8844A00FD5845 /* Info.plist */,
 				AB69189822E8844800FD5845 /* IAPDemo.xcdatamodeld */,
+				AB6918A922E8849700FD5845 /* IAPHandler.swift */,
 			);
 			path = IAPDemo;
+			sourceTree = "<group>";
+		};
+		AB6918A622E8845A00FD5845 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB6918A722E8845A00FD5845 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +114,11 @@
 				TargetAttributes = {
 					AB69188D22E8844800FD5845 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -141,6 +161,7 @@
 				AB69189422E8844800FD5845 /* ViewController.swift in Sources */,
 				AB69189222E8844800FD5845 /* AppDelegate.swift in Sources */,
 				AB69189A22E8844800FD5845 /* IAPDemo.xcdatamodeld in Sources */,
+				AB6918AA22E8849700FD5845 /* IAPHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
